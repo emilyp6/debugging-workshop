@@ -1,6 +1,6 @@
 def find_product_by_name(products, name):
     for product in products:
-        if product["name"].lower() == name:
+        if product["name"].lower() == name.strip().lower(): #bug: name could include whitespace and incorrect capitalization
             return product
     return None
 
