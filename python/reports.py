@@ -4,9 +4,9 @@ def find_product_by_name(products, name):
             return product
     return None
 
-
+#bug: low_stock should include out of stock, but didnt
 def low_stock_products(products, threshold=5):
-    return [p for p in products if p["stock"] < threshold and p["stock"] > 0]
+    return [p for p in products if p["stock"] < threshold and p["stock"] >= 0]
 
 
 def products_sorted_by_price(products):
