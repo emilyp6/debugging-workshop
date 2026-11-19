@@ -7,10 +7,9 @@ def reserve_inventory(products, order):
             product["stock"] -= 1
             
 
-
 def restock_product(products, product_id, amount):
     for product in products:
         if product["id"] == product_id:
-            product["stock"] = amount
+            product["stock"] += amount
             return product
     return None
